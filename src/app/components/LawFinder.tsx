@@ -50,16 +50,22 @@ const LawFinder: React.FC = () => {
             <div className="fixed top-0 left-0 right-0 bg-[#f9f9f9] z-10 p-6 max-w-4xl mx-auto">
                 <h1 className="text-3xl font-bold mb-4 text-[#374151]">LawFinder</h1>
                 <SearchInput value={searchTerm} onChange={setSearchTerm} />
-                {loading && <p>Loading...</p>}
+                {loading && (
+                    <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4">
+                        {[...Array(6)].map((_, index) => (
+                            <div key={index} className="animate-pulse bg-gray-300 h-[200px] w-full rounded-xl shadow mt-8"></div>
+                        ))}
+                    </div>
+                )}
                 {error && <p className="text-red-500">{error}</p>}
             </div>
 
-            <div className="pt-40">
+            <div className="pt-36">
                 <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4">
                     {currentPosts.length > 0 ? (
                         currentPosts.map((post) => <PostCard key={post.id} post={post} />)
                     ) : (
-                        <p className="text-gray-500 text-center">No results found.</p>
+                        <p className="text-gray-500 text-center opacity-5">No results found.</p>
                     )}
                 </div>
 

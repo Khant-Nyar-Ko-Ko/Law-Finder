@@ -89,3 +89,5 @@ Ensure you have an `.env.local` file with the required API configuration if appl
 - Implement a backend for better data management.
 - Add authentication and user roles.
 - Enhance UI/UX with additional filters and sorting options.
+
+Developed by Khant Nyar Ko Ko - Frontend Developer
