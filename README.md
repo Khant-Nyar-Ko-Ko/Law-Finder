@@ -13,7 +13,7 @@ Ensure you have the following installed:
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-repo/lawfinder.git
+   git clone [https://github.com/your-repo/lawfinder.git](https://github.com/Khant-Nyar-Ko-Ko/Law-Finder.git)
    cd lawfinder
    ```
 2. Install dependencies:
